@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "171526704272",
+    "firebase_url": "https://pick-pink.firebaseio.com",
+    "project_id": "pick-pink",
+    "storage_bucket": "pick-pink.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:171526704272:android:2194e6d04445c68c9ddc15",
+        "android_client_info": {
+          "package_name": "com.example.myproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "171526704272-nluh76aeguv77etdhi8otjbk5lkkejpe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHZtqpTCTJrpFBwRaSU4y0NSXlimqxM5E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "171526704272-nluh76aeguv77etdhi8otjbk5lkkejpe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

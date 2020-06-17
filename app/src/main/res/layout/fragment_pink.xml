@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:fillViewport="true"
+            tools:context=".ui.PinkFragment">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:id="@+id/imvProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/profile_pink_test"
+                android:scaleType="centerCrop"/>
+
+        <LinearLayout
+                android:layout_below="@id/imvProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp">
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+                <TextView
+                        android:id="@+id/tvName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="36sp"
+                        android:text="Leejiun"/>
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="36sp"
+                        android:text=","/>
+                <TextView
+                        android:id="@+id/tvAge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="36sp"
+                        android:text="28"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp">
+                <TextView
+                        android:id="@+id/tvAbout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="28sp"
+                        android:text="Singer.\nkorea."/>
+
+                <View android:layout_width="match_parent"
+                      android:layout_height="60dp"/>
+
+
+            </LinearLayout>
+
+            <View android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:background="@color/colorZambezi"
+            />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</ScrollView>
