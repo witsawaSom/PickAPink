@@ -84,6 +84,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
+            android:visibility="gone"
             app:rippleColor="@color/colorJaponica"/>
 
     <RelativeLayout
@@ -107,7 +108,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:src="@drawable/ic_favorite"
+                android:src="@drawable/ic_rewind"
                 app:backgroundTint="@android:color/white"
                 app:fabSize="auto"
                 android:layout_marginLeft="20dp"

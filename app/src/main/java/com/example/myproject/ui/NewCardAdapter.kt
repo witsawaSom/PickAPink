@@ -5,17 +5,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.view.ViewCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
+import com.example.myproject.HolderSelectedListener
 import com.example.myproject.PositionSelectedListener
 import com.example.myproject.R
 import com.example.myproject.model.PinkProfile
 import kotlinx.android.synthetic.main.layout_profile_pink.view.*
 
-class NewCardAdapter(private val mContext: Context, private val layouts: ArrayList<PinkProfile>,private val listener: PositionSelectedListener) : RecyclerView.Adapter<NewCardAdapter.ViewHolder>() {
+class NewCardAdapter(private val mContext: Context, private val layouts: ArrayList<PinkProfile>,private val listener: HolderSelectedListener) : RecyclerView.Adapter<NewCardAdapter.ViewHolder>() {
 
     class ViewHolder(itemsView: View): RecyclerView.ViewHolder(itemsView) {
         fun bind(pinkProfile: PinkProfile) {
@@ -42,9 +44,9 @@ class NewCardAdapter(private val mContext: Context, private val layouts: ArrayLi
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(layouts[position])
-        holder.itemView.imvInfo.setOnClickListener {
-            Toast.makeText(mContext, "Info "+layouts[position].name, Toast.LENGTH_SHORT).show()
-            listener.onPositionSelected(position)
+        holder.itemView.layoutInfo.setOnClickListener {
+            ViewCompat.setTransitionName(holder.itemView.imageView, layouts[position].name)
+            listener.onHolderPositionSelected(layouts[position],holder)
         }
     }
 }
