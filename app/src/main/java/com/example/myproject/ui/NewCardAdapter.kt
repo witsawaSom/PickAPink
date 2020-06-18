@@ -7,16 +7,15 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.bumptech.glide.load.resource.bitmap.BitmapTransitionOptions.withCrossFade
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
+import com.example.myproject.PositionSelectedListener
 import com.example.myproject.R
 import com.example.myproject.model.PinkProfile
-import com.example.myproject.model.User
 import kotlinx.android.synthetic.main.layout_profile_pink.view.*
 
-class NewCardAdapter(private val mContext: Context, private val layouts: ArrayList<PinkProfile>) : RecyclerView.Adapter<NewCardAdapter.ViewHolder>() {
+class NewCardAdapter(private val mContext: Context, private val layouts: ArrayList<PinkProfile>,private val listener: PositionSelectedListener) : RecyclerView.Adapter<NewCardAdapter.ViewHolder>() {
 
     class ViewHolder(itemsView: View): RecyclerView.ViewHolder(itemsView) {
         fun bind(pinkProfile: PinkProfile) {
@@ -28,9 +27,7 @@ class NewCardAdapter(private val mContext: Context, private val layouts: ArrayLi
                     .apply(RequestOptions().transform(RoundedCorners(40)))
                     .transform(CenterCrop(),RoundedCorners(24))
                     .into(imageView)
-                imvInfo.setOnClickListener {
-                    Toast.makeText(context, "Info "+pinkProfile.name, Toast.LENGTH_SHORT).show()
-                }
+
             }
         }
     }
@@ -45,5 +42,9 @@ class NewCardAdapter(private val mContext: Context, private val layouts: ArrayLi
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(layouts[position])
+        holder.itemView.imvInfo.setOnClickListener {
+            Toast.makeText(mContext, "Info "+layouts[position].name, Toast.LENGTH_SHORT).show()
+            listener.onPositionSelected(position)
+        }
     }
 }

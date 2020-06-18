@@ -4,7 +4,8 @@
             android:layout_height="match_parent"
             xmlns:tools="http://schemas.android.com/tools"
             android:fillViewport="true"
-            tools:context=".ui.PinkFragment">
+            tools:context=".ui.PinkFragment"
+            android:background="@color/colorWhite">
 
     <RelativeLayout
             android:layout_width="match_parent"

@@ -94,4 +94,6 @@ dependencies {
     implementation 'com.android.support:multidex:1.0.3'
 
     implementation "com.yuyakaido.android:card-stack-view:2.3.4"
+
+    implementation 'com.github.huzenan:EasyTransition:v1.0.0'
 }

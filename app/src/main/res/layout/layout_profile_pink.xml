@@ -47,7 +47,7 @@ android:paddingBottom="78dp">
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/nickname"
                 tools:text="Super Man" android:autoText="false"
-                app:autoSizeTextType="uniform" app:autoSizeMinTextSize="48sp" app:autoSizeMaxTextSize="2sp"
+                android:textSize="18sp"
                 android:fontFamily="monospace" android:lines="1" android:textColor="@color/colorZambezi"
                 android:text="Super Man"/>
         <TextView
@@ -55,7 +55,7 @@ android:paddingBottom="78dp">
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/detail"
                 tools:text="Super Man" android:autoText="false"
-                app:autoSizeTextType="uniform" app:autoSizeMinTextSize="48sp" app:autoSizeMaxTextSize="2sp"
+                android:textSize="16sp"
                 android:fontFamily="monospace" android:lines="1" android:textColor="@color/colorZambezi"
                 android:text="Super Man"/>
 

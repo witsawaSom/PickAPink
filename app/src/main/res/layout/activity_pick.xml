@@ -67,13 +67,25 @@
                 android:textColor="@color/colorZambezi"/>
     </RelativeLayout>
 
-    <com.yuyakaido.android.cardstackview.CardStackView
+    <FrameLayout
+            android:id="@+id/frameLayout"
             android:layout_below="@id/layoutHeader"
-            android:id="@+id/cardStackView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-    />
-    
+            android:layout_height="match_parent"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_below="@id/layoutHeader"
+            android:id="@+id/fabBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            app:backgroundTint="@android:color/white"
+            app:fabSize="auto"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            app:rippleColor="@color/colorJaponica"/>
+
     <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="80dp"
