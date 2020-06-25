@@ -9,14 +9,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.core.app.SharedElementCallback
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.DataSource
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
 import com.example.myproject.R
-import kotlinx.android.synthetic.main.activity_pick.*
 
 private const val ARG_PINK_PROFILE_URL = "url"
 
@@ -33,6 +34,20 @@ class PinkFragment : Fragment() {
         arguments?.let {
             url = it.getString(ARG_PINK_PROFILE_URL)
         }
+
+//        setEnterSharedElementCallback(
+//            object : SharedElementCallback() {
+//                override fun onMapSharedElements(
+//                    names: List<String?>,
+//                    sharedElements: MutableMap<String?, View?>
+//                ) {
+//                    val view = viewPager.getAdapter()
+//                        .instantiateItem(viewPager, MainActivity.currentPosition).view ?: return
+//
+//                    // Map the first shared element name to the child ImageView.
+//                    sharedElements[names[0]] = view.findViewById(R.id.image)
+//                }
+//            })
     }
 
     companion object {
@@ -61,6 +76,7 @@ class PinkFragment : Fragment() {
         context?.let {
             Glide.with(it)
                 .load(url)
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .listener(object :RequestListener<Drawable>{
                     override fun onLoadFailed(e: GlideException?, model: Any?, target: Target<Drawable>?, isFirstResource: Boolean): Boolean {
                         startPostponedEnterTransition()

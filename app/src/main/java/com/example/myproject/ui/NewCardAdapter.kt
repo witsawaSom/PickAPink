@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.core.view.ViewCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
@@ -26,6 +27,7 @@ class NewCardAdapter(private val mContext: Context, private val layouts: ArrayLi
                 detail.text = pinkProfile.location
                 Glide.with(context)
                     .load(pinkProfile.url)
+                    .diskCacheStrategy(DiskCacheStrategy.ALL)
                     .apply(RequestOptions().transform(RoundedCorners(40)))
                     .transform(CenterCrop(),RoundedCorners(24))
                     .into(imageView)

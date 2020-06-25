@@ -18,6 +18,7 @@ android:paddingBottom="78dp">
             app:layout_constraintBottom_toBottomOf="parent" android:scaleType="centerCrop"
             android:layout_marginTop="8dp" android:layout_marginRight="8dp" android:layout_marginEnd="8dp"
             android:layout_marginLeft="8dp" android:layout_marginStart="8dp" android:layout_marginBottom="8dp"
+            android:transitionName="@string/share_image_name"
             app:srcCompat="@drawable/profile_pink_test"/>
 
     <RelativeLayout

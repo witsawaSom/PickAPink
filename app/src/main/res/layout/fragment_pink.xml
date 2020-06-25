@@ -16,6 +16,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:src="@drawable/profile_pink_test"
+                android:transitionName="@string/share_image_name"
                 android:scaleType="centerCrop"/>
 
         <LinearLayout
