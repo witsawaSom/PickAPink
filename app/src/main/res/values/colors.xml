@@ -7,6 +7,9 @@
     <color name="colorJaponica">#DB7B65</color>
     <color name="colorPorsche">#ECB865</color>
     <color name="colorZambezi">#695356</color>
+    <color name="colorBlack">#191611</color>
     <color name="colorCasal">#255F63</color>
     <color name="colorWhite">#FFFFFF</color>
+
+    <color name="black_overlay">#66000000</color>
 </resources>

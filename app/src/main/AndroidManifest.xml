@@ -13,14 +13,33 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity
-                android:name=".ui.PickActivity"
-                android:label="@string/name"
+                android:name=".ui.SuperActivity"
+                android:configChanges="orientation|keyboardHidden|screenSize"
                 android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+                android:name=".ui.SplashActivity"
+                android:theme="@style/SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+        <activity
+                android:name=".ui.FingerPrintActivity"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+                android:name=".ui.LoginActivity"
+                android:configChanges="orientation|keyboardHidden|screenSize"
+                android:label="@string/title_activity_login"
+                android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+                android:name=".ui.PickActivity"
+                android:label="@string/name"
+                android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity android:name=".MainActivity">
         </activity>

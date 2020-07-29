@@ -18,7 +18,7 @@ import com.example.myproject.R
 import com.example.myproject.model.PinkProfile
 import kotlinx.android.synthetic.main.layout_profile_pink.view.*
 
-class NewCardAdapter(private val mContext: Context, private val layouts: ArrayList<PinkProfile>,private val listener: HolderSelectedListener) : RecyclerView.Adapter<NewCardAdapter.ViewHolder>() {
+class NewCardAdapter(private val mContext: Context, private val layouts: ArrayList<PinkProfile>,private val listener: HolderSelectedListener?) : RecyclerView.Adapter<NewCardAdapter.ViewHolder>() {
 
     class ViewHolder(itemsView: View): RecyclerView.ViewHolder(itemsView) {
         fun bind(pinkProfile: PinkProfile) {
@@ -48,7 +48,7 @@ class NewCardAdapter(private val mContext: Context, private val layouts: ArrayLi
         holder.bind(layouts[position])
         holder.itemView.layoutInfo.setOnClickListener {
             ViewCompat.setTransitionName(holder.itemView.imageView, layouts[position].name)
-            listener.onHolderPositionSelected(layouts[position],holder)
+            listener?.onHolderPositionSelected(layouts[position],holder)
         }
     }
 }

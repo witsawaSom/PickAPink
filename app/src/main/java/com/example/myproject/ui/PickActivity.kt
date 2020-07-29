@@ -2,24 +2,25 @@ package com.example.myproject.ui
 
 import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
+import android.media.Session2Token
 import android.os.Bundle
 import android.os.Handler
-import android.transition.Explode
-import android.transition.Visibility
 import android.util.Log
 import android.view.View
-import android.view.Window
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentActivity
 import com.bumptech.glide.Glide
 import com.example.myproject.HolderSelectedListener
-import com.example.myproject.PositionSelectedListener
 import com.example.myproject.R
 import com.example.myproject.model.PinkProfile
 import com.example.myproject.model.User
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.yuyakaido.android.cardstackview.CardStackListener
@@ -27,7 +28,14 @@ import com.yuyakaido.android.cardstackview.Direction
 import kotlinx.android.synthetic.main.activity_pick.*
 import kotlinx.android.synthetic.main.layout_profile_pink.view.*
 import java.io.ByteArrayOutputStream
+import java.util.*
+import kotlin.collections.ArrayList
 
+
+private const val DB_MESSAGE = "message"
+private const val DB_USER = "user"
+private const val DB_POST = "post"
+private const val DB_MATCH = "match"
 
 class PickActivity : AppCompatActivity(), HolderSelectedListener, CardStackListener {
 
@@ -36,12 +44,16 @@ class PickActivity : AppCompatActivity(), HolderSelectedListener, CardStackListe
     private var mainFragment: Fragment? = null
     private lateinit var storage: FirebaseStorage
     private var storageReference: StorageReference? = null
+    private lateinit var database: FirebaseDatabase
+    private lateinit var sessionToken: Session2Token
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_pick)
 
         storage = FirebaseStorage.getInstance("gs://pick-pink.appspot.com")
+        database = FirebaseDatabase.getInstance()
 
         var user = User(
             "witsawa",
@@ -56,6 +68,14 @@ class PickActivity : AppCompatActivity(), HolderSelectedListener, CardStackListe
             .into(imvProfile)
 
         initEvent()
+
+        val  myRef = getDatabaseRef(DB_MESSAGE)
+        var uniqueId = UUID.randomUUID().toString()
+
+        myRef.child(uniqueId).child("text").setValue("hello")
+        myRef.child(uniqueId).child("sender").setValue("nine1")
+        myRef.child(uniqueId).child("receiver").setValue("nine2")
+
 
         mainFragment = PickFragment()
         (mainFragment as PickFragment).setListener(this)
@@ -72,6 +92,9 @@ class PickActivity : AppCompatActivity(), HolderSelectedListener, CardStackListe
         }
 
     }
+
+
+    private fun getDatabaseRef(string: String) = database.getReference(string)
 
     private fun createStorageRef() {
         if (this.storageReference == null) {

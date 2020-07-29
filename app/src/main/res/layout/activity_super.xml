@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="#0099cc"
+        tools:context=".ui.SuperActivity">
+
+    <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+    />
+
+    <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+            android:id="@+id/dotsIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:progressMode="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="12dp"
+            app:dotsColor="@color/colorBlack"
+            app:selectedDotColor="@color/colorBlack"
+            app:dotsWidthFactor="2.5"
+            app:dotsCornerRadius="8dp"
+            app:dotsSize="16dp"
+            app:dotsSpacing="4dp"
+            android:layout_above="@+id/layoutBottom"/>
+
+    <LinearLayout
+            android:id="@+id/layoutBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true">
+
+        <View android:layout_width="0dp"
+              android:layout_height="1dp"
+              android:layout_weight="0.1"/>
+
+        <Button
+                android:id="@+id/btnAccept"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:text="Accept"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/button_background"
+                android:layout_marginLeft="22dp"
+                android:layout_marginRight="22dp"
+                android:layout_marginBottom="22dp"
+                android:textAllCaps="false"/>
+
+        <View android:layout_width="0dp"
+              android:layout_height="1dp"
+              android:layout_weight="0.1"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
