@@ -33,9 +33,6 @@ android {
         }
     }
 
-// To inline the bytecode built with JVM target 1.8 into
-// bytecode that is being built with JVM target 1.6. (e.g. navArgs)
-
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -108,4 +105,11 @@ dependencies {
     implementation 'androidx.biometric:biometric:1.0.1'
 
     implementation 'com.tbuonomo.andrui:viewpagerdotsindicator:4.1.2'
+
+    implementation  'com.fxn769:bubbletabbar:1.0.5'
+
+    repositories {
+        mavenCentral()
+    }
+    compile 'com.sothree.slidinguppanel:library:3.4.0'
 }

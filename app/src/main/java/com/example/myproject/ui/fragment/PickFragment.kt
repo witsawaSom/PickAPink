@@ -1,19 +1,17 @@
-package com.example.myproject.ui
+package com.example.myproject.ui.fragment
 
 import android.os.Bundle
-import android.os.Handler
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AccelerateInterpolator
 import com.example.myproject.HolderSelectedListener
-import com.example.myproject.PositionSelectedListener
 
 import com.example.myproject.R
 import com.example.myproject.model.PinkProfile
+import com.example.myproject.ui.adapter.NewCardAdapter
 import com.yuyakaido.android.cardstackview.*
-import kotlinx.android.synthetic.main.activity_pick.*
 import kotlinx.android.synthetic.main.fragment_pick.view.*
 
 private const val ARG_PARAM1 = "param1"
@@ -48,7 +46,6 @@ class PickFragment : Fragment(){
         this.carStackListener = carStackListener
     }
 
-
     fun onSwipe(){
         cardStackView?.swipe()
     }
@@ -62,6 +59,7 @@ class PickFragment : Fragment(){
         cardStackLayoutManager.setSwipeAnimationSetting(setting)
         cardStackView?.swipe()
     }
+
     fun onSwipeRight(){
         val setting = SwipeAnimationSetting.Builder()
             .setDirection(Direction.Right)
@@ -114,7 +112,7 @@ class PickFragment : Fragment(){
 
 
         selectedListener?.let {
-            newCardAdapter = NewCardAdapter(context!!,card, it)
+            newCardAdapter = NewCardAdapter(context!!, card, it)
             view.cardStackView.layoutManager = cardStackLayoutManager
             view.cardStackView.adapter = newCardAdapter
         }
@@ -133,9 +131,4 @@ class PickFragment : Fragment(){
     }
 
     fun getAdapter() = newCardAdapter
-
-
-
-
-
 }

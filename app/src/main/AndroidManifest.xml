@@ -12,13 +12,16 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".ui.activity.PrimaryActivity"
+                  android:theme="@style/AppTheme.NoActionBar">
+        </activity>
         <activity
-                android:name=".ui.SuperActivity"
+                android:name=".ui.activity.SuperActivity"
                 android:configChanges="orientation|keyboardHidden|screenSize"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-                android:name=".ui.SplashActivity"
+                android:name=".ui.activity.SplashActivity"
                 android:theme="@style/SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -27,17 +30,17 @@
             </intent-filter>
         </activity>
         <activity
-                android:name=".ui.FingerPrintActivity"
+                android:name=".ui.activity.FingerPrintActivity"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-                android:name=".ui.LoginActivity"
+                android:name=".ui.activity.LoginActivity"
                 android:configChanges="orientation|keyboardHidden|screenSize"
                 android:label="@string/title_activity_login"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
-                android:name=".ui.PickActivity"
+                android:name=".ui.activity.PickActivity"
                 android:label="@string/name"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>

@@ -1,4 +1,4 @@
-package com.example.myproject.ui
+package com.example.myproject.ui.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -11,8 +11,9 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        val intent = Intent(this,SuperActivity::class.java)
+        val intent = Intent(this, SuperActivity::class.java)
         startActivity(intent)
         finish()
+
     }
 }

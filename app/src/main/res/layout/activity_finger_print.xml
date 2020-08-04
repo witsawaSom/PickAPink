@@ -5,14 +5,14 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.FingerPrintActivity"
+        tools:context=".ui.activity.FingerPrintActivity"
         android:background="@color/colorBlack">
 
-    <com.example.myproject.ui.GraphicsView
+    <com.example.myproject.ui.view.GraphicsView
             android:layout_width="800dp"
             android:layout_height="800dp"
             android:layout_centerInParent="true">
 
-    </com.example.myproject.ui.GraphicsView>
+    </com.example.myproject.ui.view.GraphicsView>
 
 </RelativeLayout>

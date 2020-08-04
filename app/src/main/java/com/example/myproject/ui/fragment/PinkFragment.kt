@@ -1,6 +1,5 @@
-package com.example.myproject.ui
+package com.example.myproject.ui.fragment
 
-import android.content.Intent.getIntent
 import android.graphics.drawable.Drawable
 import android.os.Build
 import android.os.Bundle
@@ -9,7 +8,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import androidx.core.app.SharedElementCallback
 import androidx.fragment.app.Fragment
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.DataSource

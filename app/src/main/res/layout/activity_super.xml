@@ -5,7 +5,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
         android:background="#0099cc"
-        tools:context=".ui.SuperActivity">
+        tools:context=".ui.activity.SuperActivity">
 
     <androidx.viewpager.widget.ViewPager
             android:id="@+id/viewPager"
@@ -21,8 +21,8 @@
             app:progressMode="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="12dp"
-            app:dotsColor="@color/colorBlack"
-            app:selectedDotColor="@color/colorBlack"
+            app:dotsColor="@color/colorS1Brown"
+            app:selectedDotColor="@color/colorS1Brown"
             app:dotsWidthFactor="2.5"
             app:dotsCornerRadius="8dp"
             app:dotsSize="16dp"
@@ -46,7 +46,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.8"
                 android:text="Accept"
-                android:textColor="@color/colorWhite"
+                android:textColor="@color/colorS1LightSky"
                 android:background="@drawable/button_background"
                 android:layout_marginLeft="22dp"
                 android:layout_marginRight="22dp"

@@ -1,4 +1,4 @@
-package com.example.myproject.ui
+package com.example.myproject.ui.view
 
 import android.annotation.TargetApi
 import android.content.Context

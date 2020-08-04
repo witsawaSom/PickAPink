@@ -1,6 +1,5 @@
-package com.example.myproject.ui
+package com.example.myproject.ui.fragment
 
-import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -9,7 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.myproject.R
 import com.example.myproject.model.SliderItem
-import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType
+import com.example.myproject.ui.adapter.SliderAdapter
 import com.smarteist.autoimageslider.SliderView
 
 

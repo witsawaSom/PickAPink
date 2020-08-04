@@ -1,4 +1,4 @@
-package com.example.myproject.ui
+package com.example.myproject.ui.activity
 
 import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
@@ -11,16 +11,16 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
 import com.bumptech.glide.Glide
 import com.example.myproject.HolderSelectedListener
 import com.example.myproject.R
 import com.example.myproject.model.PinkProfile
 import com.example.myproject.model.User
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
+import com.example.myproject.ui.adapter.NewCardAdapter
+import com.example.myproject.ui.fragment.MyProfileFragment
+import com.example.myproject.ui.fragment.PickFragment
+import com.example.myproject.ui.fragment.PinkFragment
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.yuyakaido.android.cardstackview.CardStackListener

@@ -1,4 +1,4 @@
-package com.example.myproject.ui
+package com.example.myproject.ui.activity
 
 import android.graphics.Bitmap
 import android.graphics.Canvas

@@ -10,6 +10,11 @@
     <color name="colorBlack">#191611</color>
     <color name="colorCasal">#255F63</color>
     <color name="colorWhite">#FFFFFF</color>
-
     <color name="black_overlay">#66000000</color>
+
+    <color name="colorS1LightPink">#ffe0f7</color>
+    <color name="colorS1Pink">#fe91ca</color>
+    <color name="colorS1LightSky">#d3dbff</color>
+    <color name="colorS1Brown">#251f44</color>
+
 </resources>
