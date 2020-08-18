@@ -111,5 +111,15 @@ dependencies {
     repositories {
         mavenCentral()
     }
-    compile 'com.sothree.slidinguppanel:library:3.4.0'
+    implementation 'com.sothree.slidinguppanel:library:3.4.0'
+
+    implementation "com.hanks:htextview-base:0.1.6"
+
+    implementation "com.hanks:htextview-scale:0.1.6"
+
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    implementation 'com.felipecsl.asymmetricgridview:library:2.0.1'
 }
